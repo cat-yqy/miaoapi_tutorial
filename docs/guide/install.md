@@ -38,3 +38,6 @@ codex
 ```bash
 npm install -g @openai/codex --registry=https://registry.npmmirror.com
 ```
+
+!!! tip "安装完成后"
+    配置好 API 后，可以继续阅读 [Codex 功能全景](../codex/overview.md)，了解计划模式、子代理、Skills、MCP 和场景实战。

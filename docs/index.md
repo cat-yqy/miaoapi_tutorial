@@ -57,6 +57,14 @@ MiaoAPI 提供的 API 可在国内网络环境直接使用 Codex CLI、Codex App
 
 </div>
 
+## 深入 Codex
+
+配置好之后，Codex 还有计划模式、子代理、Skills、MCP、自动化、Code Review 和云端任务等能力。
+
+[打开 Codex 指南](codex/overview.md){ .md-button .md-button--primary }
+[场景实战](codex/playbooks.md){ .md-button }
+[最佳实践](codex/best-practices.md){ .md-button }
+
 ## 推荐阅读顺序
 
 1. 先完成 [Codex 安装](guide/install.md)。

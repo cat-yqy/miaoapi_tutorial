@@ -46,6 +46,13 @@ nav:
       - 使用 GPT-Image-2 生成图片: guide/image-generation.md
       - 在 OpenCode 中配置: guide/opencode.md
       - 常见报错与解决方法: guide/troubleshooting.md
+  - Codex 指南:
+      - 功能全景: codex/overview.md
+      - 核心机制: codex/core-concepts.md
+      - 日常使用: codex/daily-workflow.md
+      - 进阶能力: codex/advanced.md
+      - 场景实战: codex/playbooks.md
+      - 最佳实践: codex/best-practices.md
 
 markdown_extensions:
   - admonition
