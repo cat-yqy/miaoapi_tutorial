@@ -1,0 +1,77 @@
+site_name: 教程文档
+site_description: 一套持续更新的教程与实践笔记
+site_author: cat-yqy
+site_url: https://cat-yqy.github.io/tutorial/
+
+repo_name: cat-yqy/tutorial
+repo_url: https://github.com/cat-yqy/tutorial
+edit_uri: edit/main/docs/
+
+copyright: "Copyright &copy; 2026 cat-yqy"
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+
+nav:
+  - 首页: index.md
+  - 开始使用: getting-started.md
+  - 写作与排版: writing.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/cat-yqy
+      name: cat-yqy on GitHub
+
+extra_css:
+  - stylesheets/extra.css
