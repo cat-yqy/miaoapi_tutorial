@@ -55,6 +55,13 @@ nav:
       - Claude Code 进阶能力: claude-code/advanced.md
       - Claude Code 场景实战: claude-code/playbooks.md
       - Claude Code 最佳实践: claude-code/best-practices.md
+  - OpenCode 指南:
+      - OpenCode 功能全景: opencode/overview.md
+      - OpenCode 核心机制: opencode/core-concepts.md
+      - OpenCode 日常使用: opencode/daily-workflow.md
+      - OpenCode 进阶能力: opencode/advanced.md
+      - OpenCode 场景实战: opencode/playbooks.md
+      - OpenCode 最佳实践: opencode/best-practices.md
   - Codex 指南:
       - Codex 功能全景: codex/overview.md
       - Codex 核心机制: codex/core-concepts.md
