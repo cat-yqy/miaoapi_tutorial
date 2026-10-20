@@ -65,6 +65,16 @@ MiaoAPI 提供的 API 可在国内网络环境直接使用 Codex CLI、Codex App
 [场景实战](codex/playbooks.md){ .md-button }
 [最佳实践](codex/best-practices.md){ .md-button }
 
+## 更多工具
+
+除了 Codex，也可以把 MiaoAPI 接到其他终端代理。下面的配置都按“安装 → 端点 → 密钥 → 模型 → 验证”组织。
+
+| 工具 | 特点 | 配置 |
+| --- | --- | --- |
+| **Claude Code** | Anthropic 官方终端代理，只接 Claude 模型 | [接入 Claude Code](guide/claude-code.md) |
+| **OpenCode** | 开源、多 provider，支持 Responses / Chat Completions | [配置 OpenCode](guide/opencode.md) |
+| **Grok Build** | xAI 终端代理，自定义模型走 `config.toml` | [接入 Grok Build](guide/grok-build.md) |
+
 ## 推荐阅读顺序
 
 1. 先完成 [Codex 安装](guide/install.md)。

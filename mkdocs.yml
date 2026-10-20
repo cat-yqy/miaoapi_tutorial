@@ -40,11 +40,13 @@ theme:
 
 nav:
   - 首页: index.md
-  - 使用教程:
+  - 工具接入:
       - 安装 Codex CLI / App: guide/install.md
       - 在 Codex 中配置喵API: guide/configure.md
+      - Claude Code: guide/claude-code.md
+      - OpenCode: guide/opencode.md
+      - Grok Build: guide/grok-build.md
       - 使用 GPT-Image-2 生成图片: guide/image-generation.md
-      - 在 OpenCode 中配置: guide/opencode.md
       - 常见报错与解决方法: guide/troubleshooting.md
   - Codex 指南:
       - 功能全景: codex/overview.md

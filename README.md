@@ -1,6 +1,6 @@
 # MiaoAPI 教程
 
-MiaoAPI 使用教程，覆盖 Codex CLI / App、OpenCode、GPT-Image-2 图片生成和常见报错处理，并附带一套完整的 Codex 功能与实战指南。
+MiaoAPI 使用教程，覆盖 Codex CLI / App、Claude Code、OpenCode、Grok Build、GPT-Image-2 图片生成和常见报错处理，并附带一套完整的 Codex 功能与实战指南。
 
 - 在线地址：<https://cat-yqy.github.io/miaoapi_tutorial/>
 - 源码仓库：<https://github.com/cat-yqy/miaoapi_tutorial>
@@ -10,8 +10,10 @@ MiaoAPI 使用教程，覆盖 Codex CLI / App、OpenCode、GPT-Image-2 图片生
 
 - 安装 Codex CLI / App
 - 在 Codex 中配置喵API（推荐手动配置，另有 Cockpit Tools、CC Switch）
+- Claude Code 接入
+- OpenCode 接入
+- Grok Build 接入
 - 使用 GPT-Image-2 生成图片
-- 在 OpenCode 中配置
 - 常见报错与解决方法
 - Codex 指南：功能全景、核心机制、日常使用、进阶能力、场景实战、最佳实践
 
@@ -36,7 +38,9 @@ mkdocs serve
 │   │   ├── install.md
 │   │   ├── configure.md
 │   │   ├── image-generation.md
+│   │   ├── claude-code.md
 │   │   ├── opencode.md
+│   │   ├── grok-build.md
 │   │   └── troubleshooting.md
 │   ├── codex/                   # Codex 功能与实战指南
 │   │   ├── overview.md
