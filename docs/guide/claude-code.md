@@ -223,6 +223,10 @@ claude doctor              # 检查安装和配置
 | 后台任务报模型错误 | 没有设置 Haiku/小模型 | 设置 `ANTHROPIC_DEFAULT_HAIKU_MODEL` |
 | MCP 工具不出现 | 第三方网关默认关闭 tool search | 确认网关支持后设置 `ENABLE_TOOL_SEARCH=true` |
 
+## 下一步
+
+配置完成后，可以继续阅读 [Claude Code 功能全景](../claude-code/overview.md)，了解计划模式、检查点、子代理、Agent Teams、Skills 和场景实战。
+
 ## 官方参考
 
 - [Claude Code 安装](https://code.claude.com/docs/en/quickstart)

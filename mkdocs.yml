@@ -48,13 +48,20 @@ nav:
       - Grok Build: guide/grok-build.md
       - 使用 GPT-Image-2 生成图片: guide/image-generation.md
       - 常见报错与解决方法: guide/troubleshooting.md
+  - Claude Code 指南:
+      - Claude Code 功能全景: claude-code/overview.md
+      - Claude Code 核心机制: claude-code/core-concepts.md
+      - Claude Code 日常使用: claude-code/daily-workflow.md
+      - Claude Code 进阶能力: claude-code/advanced.md
+      - Claude Code 场景实战: claude-code/playbooks.md
+      - Claude Code 最佳实践: claude-code/best-practices.md
   - Codex 指南:
-      - 功能全景: codex/overview.md
-      - 核心机制: codex/core-concepts.md
-      - 日常使用: codex/daily-workflow.md
-      - 进阶能力: codex/advanced.md
-      - 场景实战: codex/playbooks.md
-      - 最佳实践: codex/best-practices.md
+      - Codex 功能全景: codex/overview.md
+      - Codex 核心机制: codex/core-concepts.md
+      - Codex 日常使用: codex/daily-workflow.md
+      - Codex 进阶能力: codex/advanced.md
+      - Codex 场景实战: codex/playbooks.md
+      - Codex 最佳实践: codex/best-practices.md
 
 markdown_extensions:
   - admonition

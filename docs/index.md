@@ -65,6 +65,14 @@ MiaoAPI 提供的 API 可在国内网络环境直接使用 Codex CLI、Codex App
 [场景实战](codex/playbooks.md){ .md-button }
 [最佳实践](codex/best-practices.md){ .md-button }
 
+## 深入 Claude Code
+
+从功能全景、权限与检查点，到子代理、Agent Teams、Skills、MCP 和场景实战。
+
+[打开 Claude Code 指南](claude-code/overview.md){ .md-button .md-button--primary }
+[场景实战](claude-code/playbooks.md){ .md-button }
+[最佳实践](claude-code/best-practices.md){ .md-button }
+
 ## 更多工具
 
 除了 Codex，也可以把 MiaoAPI 接到其他终端代理。下面的配置都按“安装 → 端点 → 密钥 → 模型 → 验证”组织。
