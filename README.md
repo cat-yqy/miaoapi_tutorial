@@ -9,7 +9,7 @@ MiaoAPI 使用教程，覆盖 Codex CLI / App、OpenCode、GPT-Image-2 图片生
 ## 内容结构
 
 - 安装 Codex CLI / App
-- 在 Codex 中配置喵API（Cockpit Tools、CC Switch、手动配置）
+- 在 Codex 中配置喵API（推荐手动配置，另有 Cockpit Tools、CC Switch）
 - 使用 GPT-Image-2 生成图片
 - 在 OpenCode 中配置
 - 常见报错与解决方法

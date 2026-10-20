@@ -19,7 +19,7 @@ MiaoAPI 提供的 API 可在国内网络环境直接使用 Codex CLI、Codex App
 
     ---
 
-    通过 Cockpit Tools、CC Switch 或手动修改配置文件接入。
+    推荐直接修改配置文件，也可以用 Cockpit Tools 或 CC Switch 管理。
 
     [:octicons-arrow-right-24: 查看配置](guide/configure.md)
 
