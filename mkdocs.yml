@@ -1,10 +1,10 @@
-site_name: 教程文档
-site_description: 一套持续更新的教程与实践笔记
+site_name: MiaoAPI 教程
+site_description: MiaoAPI 使用教程与实践笔记
 site_author: cat-yqy
-site_url: https://cat-yqy.github.io/tutorial/
+site_url: https://cat-yqy.github.io/miaoapi_tutorial/
 
-repo_name: cat-yqy/tutorial
-repo_url: https://github.com/cat-yqy/tutorial
+repo_name: cat-yqy/miaoapi_tutorial
+repo_url: https://github.com/cat-yqy/miaoapi_tutorial
 edit_uri: edit/main/docs/
 
 copyright: "Copyright &copy; 2026 cat-yqy"

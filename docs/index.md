@@ -1,6 +1,6 @@
-# 教程文档
+# MiaoAPI 教程
 
-一套持续更新的教程与实践笔记。内容按主题拆分为独立章节，方便按顺序阅读，也方便随时回查。
+MiaoAPI 的使用教程与实践笔记。内容按主题拆分为独立章节，方便按顺序阅读，也方便随时回查。
 
 <div class="grid cards" markdown>
 
@@ -26,7 +26,7 @@
 
     教程源码托管在 GitHub，欢迎查看提交记录或提出修改建议。
 
-    [:octicons-arrow-right-24: 打开仓库](https://github.com/cat-yqy/tutorial)
+    [:octicons-arrow-right-24: 打开仓库](https://github.com/cat-yqy/miaoapi_tutorial)
 
 </div>
 

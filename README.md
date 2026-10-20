@@ -1,9 +1,9 @@
-# 教程文档
+# MiaoAPI 教程
 
 使用 **MkDocs Material** 构建、由 **GitHub Actions** 自动发布到 **GitHub Pages** 的教程站点。
 
-- 在线地址：<https://cat-yqy.github.io/tutorial/>
-- 源码仓库：<https://github.com/cat-yqy/tutorial>
+- 在线地址：<https://cat-yqy.github.io/miaoapi_tutorial/>
+- 源码仓库：<https://github.com/cat-yqy/miaoapi_tutorial>
 
 ## 本地预览
 
@@ -46,5 +46,5 @@ mkdocs serve
 Git 远程地址使用专用别名：
 
 ```bash
-git remote add origin git@github-cat-yqy:cat-yqy/tutorial.git
+git remote add origin git@github-cat-yqy:cat-yqy/miaoapi_tutorial.git
 ```
