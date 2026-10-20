@@ -1,40 +1,68 @@
 # MiaoAPI 教程
 
-MiaoAPI 的使用教程与实践笔记。内容按主题拆分为独立章节，方便按顺序阅读，也方便随时回查。
+MiaoAPI 提供的 API 可在国内网络环境直接使用 Codex CLI、Codex App、OpenCode、OpenClaw 等工具，也可以在 Python 代码中调用。
+
+[开始阅读](guide/install.md){ .md-button .md-button--primary }
+[访问 MiaoAPI 官网](https://miaoapi.site){ .md-button }
 
 <div class="grid cards" markdown>
 
--   :material-rocket-launch:{ .lg .middle } __开始使用__
+-   :material-download:{ .lg .middle } __安装 Codex__
 
     ---
 
-    了解站点结构、本地预览方式，以及每次更新是如何发布到 GitHub Pages 的。
+    安装 Node.js 和 Codex CLI，或直接下载 Codex App。
 
-    [:octicons-arrow-right-24: 阅读](getting-started.md)
+    [:octicons-arrow-right-24: 开始安装](guide/install.md)
 
--   :material-pencil-outline:{ .lg .middle } __写作与排版__
-
-    ---
-
-    常用的 Markdown 语法与 MkDocs 扩展，照着示例就能写新章节。
-
-    [:octicons-arrow-right-24: 查看](writing.md)
-
--   :material-github:{ .lg .middle } __源码仓库__
+-   :material-key-variant:{ .lg .middle } __配置喵API__
 
     ---
 
-    教程源码托管在 GitHub，欢迎查看提交记录或提出修改建议。
+    通过 Cockpit Tools、CC Switch 或手动修改配置文件接入。
 
-    [:octicons-arrow-right-24: 打开仓库](https://github.com/cat-yqy/miaoapi_tutorial)
+    [:octicons-arrow-right-24: 查看配置](guide/configure.md)
+
+-   :material-image-outline:{ .lg .middle } __GPT-Image-2 生图__
+
+    ---
+
+    用 Python 调用图片生成接口，并保存生成结果。
+
+    [:octicons-arrow-right-24: 查看示例](guide/image-generation.md)
+
+-   :material-console:{ .lg .middle } __OpenCode 配置__
+
+    ---
+
+    配置 provider、模型列表和推理强度。
+
+    [:octicons-arrow-right-24: 配置 OpenCode](guide/opencode.md)
+
+-   :material-bug-outline:{ .lg .middle } __报错排查__
+
+    ---
+
+    处理 403、503、WebSocket 重连等常见问题。
+
+    [:octicons-arrow-right-24: 查看排查方法](guide/troubleshooting.md)
+
+-   :material-open-in-new:{ .lg .middle } __MiaoAPI 官网__
+
+    ---
+
+    注册账号、管理 API Key、查看套餐和最新公告。
+
+    [:octicons-arrow-right-24: 打开官网](https://miaoapi.site)
 
 </div>
 
-## 阅读建议
+## 推荐阅读顺序
 
-- 第一次访问，从「开始使用」了解本站的组织方式。
-- 需要查语法时，直接看「写作与排版」中的示例。
-- 教程正文会随着实践持续补充。
+1. 先完成 [Codex 安装](guide/install.md)。
+2. 登录 MiaoAPI，创建一个 `codex` 分组的 API Key。
+3. 从[三种配置方式](guide/configure.md)中选择一种接入。
+4. 遇到报错时，查看[常见报错与解决方法](guide/troubleshooting.md)。
 
-!!! note "持续更新"
-    如果发现内容有误，欢迎在 GitHub 仓库中提交 Issue 或 Pull Request。
+!!! warning "保护 API Key"
+    教程中的 `your-api-key` 都是占位符。请勿将真实密钥提交到公开仓库，也不要在截图、Issue 或聊天记录中泄露。

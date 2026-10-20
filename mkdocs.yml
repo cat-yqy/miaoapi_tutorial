@@ -40,8 +40,12 @@ theme:
 
 nav:
   - 首页: index.md
-  - 开始使用: getting-started.md
-  - 写作与排版: writing.md
+  - 使用教程:
+      - 安装 Codex CLI / App: guide/install.md
+      - 在 Codex 中配置喵API: guide/configure.md
+      - 使用 GPT-Image-2 生成图片: guide/image-generation.md
+      - 在 OpenCode 中配置: guide/opencode.md
+      - 常见报错与解决方法: guide/troubleshooting.md
 
 markdown_extensions:
   - admonition
@@ -69,9 +73,12 @@ markdown_extensions:
 extra:
   generator: false
   social:
+    - icon: fontawesome/solid/globe
+      link: https://miaoapi.site
+      name: MiaoAPI 官网
     - icon: fontawesome/brands/github
-      link: https://github.com/cat-yqy
-      name: cat-yqy on GitHub
+      link: https://github.com/cat-yqy/miaoapi_tutorial
+      name: GitHub 仓库
 
 extra_css:
   - stylesheets/extra.css

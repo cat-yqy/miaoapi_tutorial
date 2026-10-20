@@ -1,9 +1,18 @@
 # MiaoAPI 教程
 
-使用 **MkDocs Material** 构建、由 **GitHub Actions** 自动发布到 **GitHub Pages** 的教程站点。
+MiaoAPI 使用教程，覆盖 Codex CLI / App、OpenCode、GPT-Image-2 图片生成和常见报错处理。
 
 - 在线地址：<https://cat-yqy.github.io/miaoapi_tutorial/>
 - 源码仓库：<https://github.com/cat-yqy/miaoapi_tutorial>
+- MiaoAPI 官网：<https://miaoapi.site>
+
+## 内容结构
+
+- 安装 Codex CLI / App
+- 在 Codex 中配置喵API（Cockpit Tools、CC Switch、手动配置）
+- 使用 GPT-Image-2 生成图片
+- 在 OpenCode 中配置
+- 常见报错与解决方法
 
 ## 本地预览
 
@@ -20,22 +29,28 @@ mkdocs serve
 
 ```text
 .
-├── docs/                    # 教程正文
-│   ├── index.md             # 首页
-│   ├── getting-started.md   # 开始使用
-│   ├── writing.md           # 写作与排版
-│   └── stylesheets/         # 自定义样式
-├── mkdocs.yml               # 站点与导航配置
-├── requirements.txt         # Python 依赖
-└── .github/workflows/       # GitHub Pages 自动部署
+├── docs/
+│   ├── index.md                 # 首页
+│   ├── guide/                   # 教程正文
+│   │   ├── install.md
+│   │   ├── configure.md
+│   │   ├── image-generation.md
+│   │   ├── opencode.md
+│   │   └── troubleshooting.md
+│   ├── assets/miaoapi/          # 教程截图（WebP）
+│   └── stylesheets/             # 自定义样式
+├── mkdocs.yml                   # 站点与导航配置
+├── requirements.txt             # Python 依赖
+└── .github/workflows/           # GitHub Pages 自动部署
 ```
 
-## 新增教程页面
+## 更新教程
 
-1. 在 `docs/` 下新建 `.md` 文件，例如 `docs/chapter-01.md`。
+1. 在 `docs/guide/` 下新建或编辑 Markdown 文件。
 2. 在 `mkdocs.yml` 的 `nav` 中登记页面标题和路径。
-3. 本地运行 `mkdocs serve` 预览。
-4. 提交并推送到 `main` 分支。
+3. 图片放到 `docs/assets/miaoapi/`，建议压缩为 WebP 后再引用。
+4. 本地运行 `mkdocs serve` 预览。
+5. 提交并推送到 `main` 分支。
 
 ## 发布方式
 
