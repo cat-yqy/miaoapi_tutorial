@@ -1,6 +1,6 @@
 # MiaoAPI 教程
 
-MiaoAPI 使用教程，覆盖 Codex CLI / App、Claude Code、OpenCode、Grok Build、GPT-Image-2 图片生成和常见报错处理，并附带完整的 Claude Code、OpenCode 与 Codex 功能指南。
+MiaoAPI 使用教程，覆盖 Codex CLI / App、Claude Code、OpenCode、Grok Build、GPT-Image-2 图片生成和常见报错处理，并附带完整的 Claude Code、OpenCode、Codex 功能指南和 Clash Verge Rev 网络配置指南。
 
 - 在线地址：<https://cat-yqy.github.io/miaoapi_tutorial/>
 - 源码仓库：<https://github.com/cat-yqy/miaoapi_tutorial>
@@ -18,6 +18,7 @@ MiaoAPI 使用教程，覆盖 Codex CLI / App、Claude Code、OpenCode、Grok Bu
 - Claude Code 指南：功能全景、核心机制、日常使用、进阶能力、场景实战、最佳实践
 - OpenCode 指南：功能全景、核心机制、日常使用、进阶能力、场景实战、最佳实践
 - Codex 指南：功能全景、核心机制、日常使用、进阶能力、场景实战、最佳实践
+- Clash Verge 指南：介绍、安装、快速上手、详细配置、日常使用、排错
 
 ## 本地预览
 
@@ -65,6 +66,13 @@ mkdocs serve
 │   │   ├── advanced.md
 │   │   ├── playbooks.md
 │   │   └── best-practices.md
+│   ├── clash-verge/             # Clash Verge Rev 指南
+│   │   ├── overview.md
+│   │   ├── install.md
+│   │   ├── quickstart.md
+│   │   ├── configuration.md
+│   │   ├── usage.md
+│   │   └── troubleshooting.md
 │   ├── assets/miaoapi/          # 教程截图（WebP）
 │   └── stylesheets/             # 自定义样式
 ├── mkdocs.yml                   # 站点与导航配置

@@ -91,6 +91,14 @@ MiaoAPI 提供的 API 可在国内网络环境直接使用 Codex CLI、Codex App
 | **OpenCode** | 开源、多 provider，支持 Responses / Chat Completions | [配置 OpenCode](guide/opencode.md) |
 | **Grok Build** | xAI 终端代理，自定义模型走 `config.toml` | [接入 Grok Build](guide/grok-build.md) |
 
+## 网络与代理
+
+Clash Verge Rev 是桌面代理客户端，和 MiaoAPI 的模型接入是两套独立配置。这里讲安装、订阅、系统代理、TUN、规则和排错。
+
+[打开 Clash Verge 指南](clash-verge/overview.md){ .md-button .md-button--primary }
+[详细配置](clash-verge/configuration.md){ .md-button }
+[常见问题](clash-verge/troubleshooting.md){ .md-button }
+
 ## 推荐阅读顺序
 
 1. 先完成 [Codex 安装](guide/install.md)。
