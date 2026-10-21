@@ -76,6 +76,11 @@ nav:
       - Clash Verge 详细配置: clash-verge/configuration.md
       - Clash Verge 日常使用: clash-verge/usage.md
       - Clash Verge 排错: clash-verge/troubleshooting.md
+  - 服务商选择:
+      - 服务商选择：原则: vpn/overview.md
+      - 服务商选择：评估: vpn/criteria.md
+      - 服务商选择：试用: vpn/testing.md
+      - 服务商选择：场景: vpn/scenarios.md
 
 markdown_extensions:
   - admonition

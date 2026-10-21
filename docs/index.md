@@ -98,6 +98,7 @@ Clash Verge Rev 是桌面代理客户端，和 MiaoAPI 的模型接入是两套�
 [打开 Clash Verge 指南](clash-verge/overview.md){ .md-button .md-button--primary }
 [详细配置](clash-verge/configuration.md){ .md-button }
 [常见问题](clash-verge/troubleshooting.md){ .md-button }
+[服务商选择](vpn/overview.md){ .md-button }
 
 ## 推荐阅读顺序
 
