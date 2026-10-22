@@ -62,6 +62,13 @@ nav:
       - OpenCode 进阶能力: opencode/advanced.md
       - OpenCode 场景实战: opencode/playbooks.md
       - OpenCode 最佳实践: opencode/best-practices.md
+  - Pi Agent:
+      - Pi 功能全景: pi/overview.md
+      - Pi 安装: pi/install.md
+      - Pi 日常使用: pi/usage.md
+      - Pi 配置与定制: pi/configuration.md
+      - Pi 扩展与生态: pi/extensions.md
+      - Pi 场景实战: pi/playbooks.md
   - Codex 指南:
       - Codex 功能全景: codex/overview.md
       - Codex 核心机制: codex/core-concepts.md

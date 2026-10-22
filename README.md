@@ -17,6 +17,7 @@ MiaoAPI 使用教程，覆盖 Codex CLI / App、Claude Code、OpenCode、Grok Bu
 - 常见报错与解决方法
 - Claude Code 指南：功能全景、核心机制、日常使用、进阶能力、场景实战、最佳实践
 - OpenCode 指南：功能全景、核心机制、日常使用、进阶能力、场景实战、最佳实践
+- Pi Agent 指南：功能全景、安装、日常使用、配置与定制、扩展生态、场景实战
 - Codex 指南：功能全景、核心机制、日常使用、进阶能力、场景实战、最佳实践
 - Clash Verge 指南：介绍、安装、快速上手、详细配置、日常使用、排错
 - 服务商选择：原则、评估清单、试用验收、场景建议
@@ -60,6 +61,13 @@ mkdocs serve
 │   │   ├── advanced.md
 │   │   ├── playbooks.md
 │   │   └── best-practices.md
+│   ├── pi/                      # Pi Agent 安装、使用与扩展指南
+│   │   ├── overview.md
+│   │   ├── install.md
+│   │   ├── usage.md
+│   │   ├── configuration.md
+│   │   ├── extensions.md
+│   │   └── playbooks.md
 │   ├── codex/                   # Codex 功能与实战指南
 │   │   ├── overview.md
 │   │   ├── core-concepts.md
