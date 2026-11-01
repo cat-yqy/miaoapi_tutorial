@@ -94,6 +94,8 @@ nav:
       - 服务商选择：评估: vpn/criteria.md
       - 服务商选择：试用: vpn/testing.md
       - 服务商选择：场景: vpn/scenarios.md
+  - 推荐服务商:
+      - MESL 推荐: vpn/mesl.md
 
 markdown_extensions:
   - admonition
