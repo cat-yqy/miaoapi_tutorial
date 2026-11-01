@@ -15,7 +15,6 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
-    - navigation.sections
     - navigation.top
     - navigation.footer
     - search.suggest
@@ -69,6 +68,13 @@ nav:
       - Pi 配置与定制: pi/configuration.md
       - Pi 扩展与生态: pi/extensions.md
       - Pi 场景实战: pi/playbooks.md
+  - DeepSeek Harness:
+      - DSH 功能全景: dsh/overview.md
+      - DSH 安装: dsh/install.md
+      - DSH Desktop: dsh/desktop.md
+      - DSH CLI 与 TUI: dsh/cli-tui.md
+      - DSH 配置: dsh/configuration.md
+      - DSH 场景与排错: dsh/playbooks.md
   - Codex 指南:
       - Codex 功能全景: codex/overview.md
       - Codex 核心机制: codex/core-concepts.md
