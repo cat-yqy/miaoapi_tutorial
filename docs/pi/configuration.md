@@ -172,7 +172,7 @@ Pi 支持通过 llama.cpp router 使用本地 GGUF 模型；官方有 CPU 和 NV
   "$schema": "https://pi.dev/schemas/models.schema.json",
   "providers": {
     "miaoapi": {
-      "baseUrl": "https://miaoapi.site/v1",
+      "baseUrl": "https://cn.miaoapi.site/v1",
       "api": "openai-responses",
       "apiKey": "$MIAOAPI_API_KEY",
       "models": [
@@ -192,6 +192,9 @@ pi
 ```
 
 如果 Responses 返回 404，把 `api` 改成 `openai-completions`。模型 ID 以 MiaoAPI 控制台为准。
+
+!!! tip "默认直连优化线路"
+    示例默认用 `https://cn.miaoapi.site/v1`，国内网络下通常直连更快、更稳。如果该线路在你的网络不可用，把 `baseUrl` 换成 `https://miaoapi.site/v1`。
 
 ## Prompt Templates
 

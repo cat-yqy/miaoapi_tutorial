@@ -5,6 +5,10 @@ Claude Code 是 Anthropic 的终端编码代理。它和 Codex 一样，能读�
 !!! warning "Claude Code 只接 Claude 模型"
     Claude Code 官方只支持 Claude 模型。不要把 GPT、Grok 等非 Claude 模型填进 `ANTHROPIC_MODEL`。使用 MiaoAPI 时，请确认你的分组里有可用的 Claude 模型。
 
+!!! tip "默认使用直连优化线路"
+    `ANTHROPIC_BASE_URL` 默认填 **https://cn.miaoapi.site**。这是直连优化入口，国内网络下通常延迟更低、连接更稳。
+    如果该线路在你的网络不可用，再改回 `https://miaoapi.site`；两者都只填到域名，不要加 `/v1`。
+
 ## 1. 安装
 
 macOS / Linux：
@@ -43,7 +47,7 @@ irm https://claude.ai/install.ps1 | iex
 在终端里设置环境变量，然后启动 Claude Code：
 
 ```bash
-export ANTHROPIC_BASE_URL="https://miaoapi.site"
+export ANTHROPIC_BASE_URL="https://cn.miaoapi.site"
 export ANTHROPIC_AUTH_TOKEN="sk-你的密钥"
 export ANTHROPIC_MODEL="claude-sonnet-4-6"
 export ANTHROPIC_DEFAULT_HAIKU_MODEL="claude-haiku-4-5"
@@ -55,13 +59,16 @@ claude
 
 | 变量 | 作用 | 注意 |
 | --- | --- | --- |
-| `ANTHROPIC_BASE_URL` | 指向 MiaoAPI 网关 | 填 `https://miaoapi.site`，**不要**加 `/v1` |
+| `ANTHROPIC_BASE_URL` | 指向 MiaoAPI 网关 | 默认填 `https://cn.miaoapi.site`，**不要**加 `/v1`；不可用时换 `https://miaoapi.site` |
 | `ANTHROPIC_AUTH_TOKEN` | 以 `Authorization: Bearer` 发送密钥 | MiaoAPI 通常用这个 |
 | `ANTHROPIC_API_KEY` | 以 `x-api-key` 发送密钥 | 如果 Bearer 返回 401，再改用这个 |
 | `ANTHROPIC_MODEL` | 主模型 ID | 换成 MiaoAPI 实际提供的 Claude 模型 |
 | `ANTHROPIC_DEFAULT_HAIKU_MODEL` | 后台小任务模型 | 建议设一个便宜、可用的 Claude 模型 |
 
 Claude Code 会在 base URL 后面拼接 `/v1/messages`，所以 `ANTHROPIC_BASE_URL` 只填到域名，不要重复写 `/v1`。
+
+!!! note "直连线路不可用？"
+    把 `ANTHROPIC_BASE_URL` 改回 `https://miaoapi.site` 即可，其他变量不变。
 
 如果 Bearer 方式报 401，改用：
 
@@ -78,7 +85,7 @@ export ANTHROPIC_API_KEY="sk-你的密钥"
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "env": {
-    "ANTHROPIC_BASE_URL": "https://miaoapi.site",
+    "ANTHROPIC_BASE_URL": "https://cn.miaoapi.site",
     "ANTHROPIC_AUTH_TOKEN": "sk-你的密钥",
     "ANTHROPIC_MODEL": "claude-sonnet-4-6",
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-haiku-4-5"
@@ -154,7 +161,7 @@ export CLAUDE_CODE_MAX_CONTEXT_TOKENS=200000
 
 重点看两行：
 
-- `Anthropic base URL` 是否为 `https://miaoapi.site`；
+- `Anthropic base URL` 是否为 `https://cn.miaoapi.site`（默认直连线路）；
 - `Auth token` / `API key` 是否显示你设置的环境变量来源。
 
 也可以直接用 curl 验证网关：
@@ -217,7 +224,7 @@ claude doctor              # 检查安装和配置
 | 现象 | 可能原因 | 处理 |
 | --- | --- | --- |
 | `401` / 认证失败 | 用了错误的变量或密钥分组不对 | Bearer 用 `ANTHROPIC_AUTH_TOKEN`，x-api-key 用 `ANTHROPIC_API_KEY`；确认密钥有 Claude 权限 |
-| `404` | base URL 多了 `/v1` 或路径不对 | 改成 `https://miaoapi.site`，让 Claude Code 自己拼 `/v1/messages` |
+| `404` | base URL 多了 `/v1` 或路径不对 | 改成 `https://cn.miaoapi.site`；不可用时换 `https://miaoapi.site`，让 Claude Code 自己拼 `/v1/messages` |
 | 模型不存在 | 模型 ID 不是 MiaoAPI 的 ID | 在控制台查看实际模型名，更新 `ANTHROPIC_MODEL` |
 | 仍然走官方账号 | 环境变量没进入当前进程 | 在同一个终端启动 `claude`，或用 `~/.claude/settings.json` |
 | 后台任务报模型错误 | 没有设置 Haiku/小模型 | 设置 `ANTHROPIC_DEFAULT_HAIKU_MODEL` |

@@ -98,7 +98,7 @@ OpenCode 不是“一个巨大的终端程序”，而是 **client/server** 架�
 | --- | --- | --- |
 | **本地能力** | TUI、文件编辑、shell、子代理、Skills、MCP、Server | 模型接口和本机环境 |
 | **托管/第三方** | OpenCode Zen / Go / Console、GitHub Actions、GitLab CI | OpenCode 账号或对应平台 |
-| **MiaoAPI** | 自定义 provider，走 `https://miaoapi.site/v1` | MiaoAPI Key 和模型权限 |
+| **MiaoAPI** | 自定义 provider，默认走直连优化线路 `https://cn.miaoapi.site/v1` | MiaoAPI Key 和模型权限 |
 
 使用 MiaoAPI 时，TUI、Server、SDK 和大部分本地扩展都可用；OpenCode Zen/Go 不需要开启。GitHub/GitLab 集成需要把 MiaoAPI 的凭据配置进对应 runner 的 secret。
 

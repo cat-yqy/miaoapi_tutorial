@@ -61,6 +61,10 @@ OpenCode 的配置会**合并**，不是互相替换：
 
 ## 4. 推荐配置：走 Responses API
 
+!!! tip "默认使用直连优化线路"
+    `baseURL` 默认填 **https://cn.miaoapi.site/v1**。这是直连优化入口，国内网络下通常延迟更低、连接更稳。
+    如果该线路在你的网络不可用，再改回 `https://miaoapi.site/v1`；不要漏掉 `/v1`。
+
 MiaoAPI 提供 `/v1/responses` 时，用 `@ai-sdk/openai`。写入 `~/.config/opencode/opencode.json`：
 
 ```json
@@ -71,7 +75,7 @@ MiaoAPI 提供 `/v1/responses` 时，用 `@ai-sdk/openai`。写入 `~/.config/op
       "npm": "@ai-sdk/openai",
       "name": "MiaoAPI",
       "options": {
-        "baseURL": "https://miaoapi.site/v1",
+        "baseURL": "https://cn.miaoapi.site/v1",
         "apiKey": "{env:MIAOAPI_API_KEY}"
       },
       "models": {
@@ -98,7 +102,7 @@ opencode
 
 要点：
 
-- `options.baseURL` 要带 `/v1`，OpenCode 会在后面拼 `/responses`；
+- `options.baseURL` 默认用 `https://cn.miaoapi.site/v1`，要带 `/v1`；OpenCode 会在后面拼 `/responses`；直连线路不可用时换 `https://miaoapi.site/v1`；
 - `npm` 选 `@ai-sdk/openai` 表示用 Responses API；
 - `model` 的格式是 `provider-id/model-id`；
 - `limit` 是 OpenCode 用来估算剩余上下文的，按模型实际值调整；
@@ -149,7 +153,7 @@ opencode auth list
 
 - provider id 是否和配置一致；
 - `npm` 是否选对（Responses 用 `@ai-sdk/openai`，Chat 用 `@ai-sdk/openai-compatible`）；
-- `baseURL` 是否包含 `/v1`；
+- `baseURL` 是否包含 `/v1`，以及是否用了 `https://cn.miaoapi.site/v1`；
 - 环境变量是否在启动 OpenCode 的同一个终端里。
 
 查看最终合并后的配置：
@@ -198,7 +202,7 @@ opencode run "解释这个函数"  # 非交互执行
 | 现象 | 可能原因 | 处理 |
 | --- | --- | --- |
 | 401 / 认证失败 | 环境变量没生效，或 `/connect` 的 provider id 不一致 | 在同一终端 export；运行 `opencode auth list` |
-| 404 | `baseURL` 少了 `/v1`，或协议选错 | Responses 用 `@ai-sdk/openai`，Chat 用 `@ai-sdk/openai-compatible` |
+| 404 | `baseURL` 少了 `/v1`，或协议选错 | 默认用 `https://cn.miaoapi.site/v1`；Responses 用 `@ai-sdk/openai`，Chat 用 `@ai-sdk/openai-compatible` |
 | 模型列表为空 | `models` 没定义，或 provider 未加载 | 检查 `provider.miaoapi.models` 和 `opencode debug config` |
 | 上下文显示不对 | `limit.context` 和真实模型不一致 | 按模型实际上下文修改 |
 | 改完配置不生效 | 项目配置覆盖了全局配置 | 检查项目根目录的 `opencode.json`，配置是合并的 |

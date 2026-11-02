@@ -126,13 +126,16 @@ DSH 自带一些 provider，例如：
 
 ```text
 Provider ID: miaoapi
-基础 URL:    https://miaoapi.site/v1
+基础 URL:    https://cn.miaoapi.site/v1
 API 协议:    OpenAI Chat Completions
 API Key:     sk-你的密钥
 模型:        gpt-6.1-sol
 ```
 
 如果端点支持 Responses，也可以选 OpenAI Responses。模型 ID 以 MiaoAPI 控制台为准。
+
+!!! tip "默认直连优化线路"
+    这里默认用 `https://cn.miaoapi.site/v1`，国内网络下通常直连更快、更稳。如果该线路在你的网络不可用，把地址换成 `https://miaoapi.site/v1` 即可。
 
 ### 高级：`cordis.patch.yml`
 
@@ -145,7 +148,7 @@ API Key:     sk-你的密钥
       miaoapi:
         apiKeyEnv: MIAOAPI_API_KEY
         api: openai-completions
-        baseURL: https://miaoapi.site/v1
+        baseURL: https://cn.miaoapi.site/v1
         models:
           - id: gpt-6.1-sol
 ```

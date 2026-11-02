@@ -5,6 +5,10 @@
 !!! warning "密钥分组"
     需要在 **GPT-Image-2** 分组下创建密钥，否则调用会失败。
 
+!!! tip "默认使用直连优化线路"
+    代码默认使用 **https://cn.miaoapi.site/v1**。这是直连优化入口，国内网络下通常延迟更低、连接更稳。
+    如果该线路在你的网络不可用，设置 `SUB2API_BASE_URL=https://miaoapi.site/v1` 即可。
+
 ## 示例代码
 
 以下代码通过 MiaoAPI 的 Responses 接口调用图片生成工具，并保存中间图和最终图。将代码保存为 `generate.py`。
@@ -17,7 +21,7 @@ from pathlib import Path
 
 import httpx
 
-BASE_URL = os.getenv("SUB2API_BASE_URL", "https://miaoapi.site/v1").rstrip("/")
+BASE_URL = os.getenv("SUB2API_BASE_URL", "https://cn.miaoapi.site/v1").rstrip("/")
 API_KEY = os.environ["SUB2API_KEY"]
 MODEL = os.getenv("SUB2API_MODEL", "gpt-5.5")
 PROMPT = os.getenv("IMAGE_PROMPT", "机械龙，暗黑幻想风格")

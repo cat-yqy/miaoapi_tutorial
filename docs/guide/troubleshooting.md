@@ -75,7 +75,7 @@ windows_wsl_setup_acknowledged = true
 
 [model_providers.OpenAI]
 name = "OpenAI"
-base_url = "https://miaoapi.site/"
+base_url = "https://cn.miaoapi.site/"
 wire_api = "responses"
 requires_openai_auth = true
 supports_websockets = false
@@ -83,6 +83,9 @@ supports_websockets = false
 [features]
 goals = true
 ```
+
+!!! note "默认直连线路"
+    这里默认用 `https://cn.miaoapi.site/`。如果该线路在你的网络不可用，只把 `base_url` 改回 `https://miaoapi.site/`，其他字段不变。
 
 ## 503
 

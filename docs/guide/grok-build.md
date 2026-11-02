@@ -65,6 +65,10 @@ $env:MIAOAPI_API_KEY = "sk-你的密钥"
 
 ## 4. 配置自定义模型
 
+!!! tip "默认使用直连优化线路"
+    `base_url` 默认填 **https://cn.miaoapi.site/v1**。这是直连优化入口，国内网络下通常延迟更低、连接更稳。
+    如果该线路在你的网络不可用，再改回 `https://miaoapi.site/v1`；不要漏掉 `/v1`。
+
 编辑全局配置：
 
 - macOS / Linux：`~/.grok/config.toml`
@@ -81,7 +85,7 @@ default = "miaoapi-grok"
 
 [model.miaoapi-grok]
 model = "grok-4.6"                    # 换成 MiaoAPI 实际模型 ID
-base_url = "https://miaoapi.site/v1"
+base_url = "https://cn.miaoapi.site/v1"
 name = "MiaoAPI · Grok"
 env_key = "MIAOAPI_API_KEY"
 api_backend = "responses"
@@ -93,7 +97,7 @@ context_window = 200000
 | 字段 | 作用 |
 | --- | --- |
 | `model` | 发给 MiaoAPI 的模型 ID，不是配置里的显示名 |
-| `base_url` | OpenAI 兼容端点，要带 `/v1` |
+| `base_url` | OpenAI 兼容端点，默认 `https://cn.miaoapi.site/v1`；要带 `/v1` |
 | `name` | 模型选择器里显示的名字 |
 | `env_key` | 从哪个环境变量读取 MiaoAPI Key |
 | `api_backend` | `responses`、`chat_completions` 或 `messages` |
@@ -195,7 +199,7 @@ grok -p "检查最近的提交，列出风险点" --output-format json
 | 现象 | 可能原因 | 处理 |
 | --- | --- | --- |
 | `401` / 认证失败 | MiaoAPI Key 没读到，或分组无权限 | 在同一终端 export；检查 `grok inspect` |
-| `404` | `base_url` 路径不对，或 `api_backend` 选错 | 用 `https://miaoapi.site/v1`；Responses 404 时换 `chat_completions` |
+| `404` | `base_url` 路径不对，或 `api_backend` 选错 | 默认用 `https://cn.miaoapi.site/v1`；不可用时换 `https://miaoapi.site/v1`；Responses 404 时换 `chat_completions` |
 | 模型不存在 | `model` 不是 MiaoAPI 的真实 ID | 在控制台查看模型 ID，更新 `[model.*].model` |
 | 配置不生效 | 改的是项目配置，但全局默认没变 | 检查 `~/.grok/config.toml` 和 `grok inspect` |
 | 首次启动一直要求登录 | 还没完成 xAI 登录 | 运行 `grok login`，或使用 `grok login --device-auth` |

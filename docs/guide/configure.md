@@ -5,6 +5,19 @@
 !!! tip "先创建密钥"
     登录 MiaoAPI 后进入密钥管理，创建一个 `codex` 分组的密钥。如果已购买套餐，请选择套餐对应的专属分组。
 
+!!! tip "默认使用直连优化线路"
+    配置里的 `base_url` 默认填 **https://cn.miaoapi.site**。这是直连优化入口，国内网络下通常延迟更低、连接更稳，体验更好。
+    如果你的网络无法访问该线路，再改回 `https://miaoapi.site`；两者只是入口不同。
+
+## 选择接入线路
+
+| 线路 | Base URL | 说明 |
+| --- | --- | --- |
+| **直连优化（默认，推荐）** | `https://cn.miaoapi.site` | 国内网络通常可直连，延迟更低、连接更稳 |
+| **通用/备用** | `https://miaoapi.site` | 直连线路不可用时使用 |
+
+Codex 这里只需要域名，不要加 `/v1`；Codex 会自己拼接路径。
+
 ## 方法一：修改配置文件（推荐）
 
 ### 1. 创建 API Key
@@ -67,7 +80,7 @@ web_search = "live"
 
 [model_providers]
   [model_providers.OpenAI]
-    base_url = "https://miaoapi.site"
+    base_url = "https://cn.miaoapi.site"
     name = "custom"
     requires_openai_auth = true
     supports_websockets = false
@@ -80,6 +93,9 @@ web_search = "live"
     "gpt-5.5" = 1
     "gpt-5.6-sol" = 2
 ```
+
+!!! note "直连线路不可用？"
+    只把 `base_url` 改回 `https://miaoapi.site`，其他字段不变。不要在域名后加 `/v1`。
 
 !!! warning "注意权限设置"
     这份配置包含 `approval_policy = "never"` 和 `sandbox_mode = "danger-full-access"`。Codex 将不再逐步确认操作，并拥有当前环境的完整访问权限。请只在你信任的目录中使用；如需更保守，请自行调整这两项。
@@ -262,7 +278,10 @@ Cockpit Tools 可以方便地切换不同中转站或官方订阅，保持本地
 
 ![操作截图](../assets/miaoapi/img-08.webp)
 
-下拉，红色框填API key（需要去网页密钥管理创建），绿色框填https://miaoapi.site/，黄色框随便填，比如miaoapi。
+下拉，红色框填API key（需要去网页密钥管理创建），绿色框填 **https://cn.miaoapi.site/**，黄色框随便填，比如miaoapi。
+
+!!! note "截图说明"
+    下方截图中的域名是旧版 `miaoapi.site`，仅作界面位置示意。实际请优先填写 `https://cn.miaoapi.site/`；如果直连线路不可用，再换回 `https://miaoapi.site/`。
 
 ![操作截图](../assets/miaoapi/img-09.webp)
 
